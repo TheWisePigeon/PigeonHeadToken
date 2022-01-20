@@ -1,5 +1,3 @@
-const values = require("./token")
-const connect = require("./db/connection")
 const express = require('express')
 const bp = require('body-parser')
 const app = express()
@@ -9,13 +7,10 @@ app.get('/', (req, res)=>{
 
 })
 
-const port = 3000
+const PORT = process.env.PORT || 3000
 
 app.listen(port, ()=>{
     console.log("App listening on port " + port);
-    console.log(values.token.name);
-    connect.con.connect((error)=>{
-        console.log("Connected successfully");
-    })
+    
 
 })
