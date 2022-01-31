@@ -11,6 +11,8 @@
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
+    "ipfs": "^0.62.0",
+    "ipfs-http-client": "^56.0.0",
     "mongoose": "^6.1.7",
     "mysql": "^2.18.1"
   }
