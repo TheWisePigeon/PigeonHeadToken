@@ -3,10 +3,10 @@ const ipfs = require("ipfs")
 const bp = require('body-parser')
 const app = express()
 app.use(bp.urlencoded({ extended: true }))
+app.use(express.static(__dirname + '/public'))
 
-async function create() {
-    const node = await ipfs.create()
-}
+
+
 
 
 app.get('/', (req, res)=>{
@@ -19,11 +19,15 @@ app.post('/', (req,res)=>{
     let name = result.name
     let email = result.email
     let password = result.password
+
     let user = {
-        "name":`${name}`,
-        "password":`${password}`
+        "name" : `${name}`,
+        "email" : `${email}`,
+        "password" : `${password}`
     }
-    res.send("Worked")
+    res.send(user)
+    
+    
 })
 
 const port = process.env.PORT || 3000
