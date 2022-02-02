@@ -3,21 +3,19 @@ const ipfs = require("ipfs")
 const bp = require('body-parser')
 const app = express()
 app.use(bp.urlencoded({ extended: true }))
-app.use(express.static(__dirname + '/public'))
-
-
-
-
+app.use(express.static('public'))
+app.set('view engine', 'ejs')
 
 app.get('/', (req, res)=>{
-    res.sendFile(__dirname + "/pages/index.html" )
+    res.render('pages/index')
+    //res.sendFile(__dirname + "/index.html")
 
 })
 
 app.post('/', (req,res)=>{
     let result = req.body
     let name = result.name
-    let email = result.email
+    let email = result.email 
     let password = result.password
 
     let user = {
@@ -26,8 +24,7 @@ app.post('/', (req,res)=>{
         "password" : `${password}`
     }
     res.send(user)
-    
-    
+        
 })
 
 const port = process.env.PORT || 3000
