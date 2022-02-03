@@ -1,9 +1,14 @@
 const express = require('express')
+const ipfs = require("ipfs")
 const bp = require('body-parser')
 const app = express()
+app.use(bp.urlencoded({ extended: true }))
+app.use(express.static('public'))
+app.set('view engine', 'ejs')
 
 app.get('/', (req, res)=>{
-    res.sendFile(__dirname + "/pages/index.html" )
+    res.render('pages/index')
+    //res.sendFile(__dirname + "/index.html")
 
 })
 
