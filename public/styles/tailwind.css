@@ -537,6 +537,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   left: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -550,6 +554,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .flex {
@@ -576,6 +585,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 24rem;
 }
 
+.h-20 {
+  height: 5rem;
+}
+
 .w-16 {
   width: 4rem;
 }
@@ -588,12 +601,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: auto;
 }
 
+.w-screen {
+  width: 100vw;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
 
 .flex-grow-0 {
   flex-grow: 0;
+}
+
+.grid-flow-col {
+  grid-auto-flow: column;
 }
 
 .flex-col {
@@ -604,8 +625,29 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
 }
 
 .border-y-gray-900 {
@@ -697,6 +739,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-extrabold {
