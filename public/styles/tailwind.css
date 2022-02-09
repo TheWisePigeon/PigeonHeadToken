@@ -552,16 +552,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 1.5rem;
 }
 
-.h-12 {
-  height: 3rem;
-}
-
 .w-full {
   width: 100%;
 }
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .-rotate-6 {
@@ -716,14 +716,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .pt-4 {
   padding-top: 1rem;
-}
-
-.pb-24 {
-  padding-bottom: 6rem;
-}
-
-.pr-12 {
-  padding-right: 3rem;
 }
 
 .pt-16 {
@@ -904,10 +896,6 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 
-  .md\:justify-start {
-    justify-content: flex-start;
-  }
-
   .md\:p-4 {
     padding: 1rem;
   }
@@ -946,10 +934,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .lg\:pb-6 {
     padding-bottom: 1.5rem;
-  }
-
-  .lg\:pb-0 {
-    padding-bottom: 0px;
   }
 
   .lg\:text-4xl {
