@@ -10,6 +10,12 @@ app.get('/', (req, res)=>{
     res.sendFile(__dirname + "/pages/index.html")
 
 })
+.get('/register', (req, res)=>{
+    res.sendFile(__dirname + "/pages/register.html")
+})
+.get('/thanks', (req, res)=>{
+    res.sendFile(__dirname + "/pages/thanks.html")
+})
 
 const PORT = process.env.PORT || 3000
 
