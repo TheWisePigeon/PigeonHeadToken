@@ -7,7 +7,7 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res)=>{
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + "/pages/index.html")
 
 })
 
