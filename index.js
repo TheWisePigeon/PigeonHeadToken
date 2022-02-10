@@ -6,14 +6,30 @@ app.use(bp.urlencoded({ extended: true }))
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
+//userSchema
+function User(name, pwd, balance) {
+    this.name = name
+    this.password = pwd
+    this.balance = balance
+}
+
+
 app.get('/', (req, res)=>{
     res.sendFile(__dirname + "/pages/index.html")
 
 })
-.get('/register', (req, res)=>{
+
+app.get('/register', (req, res)=>{
     res.sendFile(__dirname + "/pages/register.html")
 })
-.get('/thanks', (req, res)=>{
+
+app.post('/register', (req, res)=>{
+    let result = req.body
+    let newUser = new User(result.name, result.pwd, 2000)
+    console.log(newUser.name);
+})
+
+app.get('/thanks', (req, res)=>{
     res.sendFile(__dirname + "/pages/thanks.html")
 })
 
