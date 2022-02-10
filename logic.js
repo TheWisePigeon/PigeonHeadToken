@@ -14,6 +14,16 @@ async function addData(data) {
     return results
 }
 
+async function getData(cid) {
+    const node = await createNode()
+    const stream = await node.cat(cid)
+    let data =''
+    for await (const chunk of stream) {
+        data += chunk.toString()
+    }
+    console.log(data);
+}
+
 module.exports = {
     totalSupply,
     createNode,
