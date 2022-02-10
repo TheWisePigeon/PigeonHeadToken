@@ -1,4 +1,5 @@
+const totalSupply = 10000
 
-async function add(user) {
-    
+module.exports = {
+    totalSupply
 }

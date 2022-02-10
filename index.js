@@ -1,6 +1,7 @@
 const express = require('express')
 const ipfs = require("ipfs")
 const bp = require('body-parser')
+const logic = require('./logic')
 const app = express()
 app.use(bp.urlencoded({ extended: true }))
 app.use(express.static('public'))
@@ -26,7 +27,9 @@ app.get('/register', (req, res)=>{
 app.post('/register', (req, res)=>{
     let result = req.body
     let newUser = new User(result.name, result.pwd, 2000)
-    console.log(newUser.name);
+    logic.totalSupply-=2000
+    console.log(logic.totalSupply);
+
 })
 
 app.get('/thanks', (req, res)=>{
