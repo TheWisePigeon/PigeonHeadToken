@@ -27,5 +27,6 @@ async function getData(cid) {
 module.exports = {
     totalSupply,
     createNode,
-    addData
+    addData,
+    getData
 }
