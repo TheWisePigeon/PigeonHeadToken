@@ -1,5 +1,4 @@
 const express = require('express')
-const ipfs = require("ipfs")
 const bp = require('body-parser')
 const logic = require('./logic')
 const app = express()
@@ -24,11 +23,12 @@ app.get('/register', (req, res)=>{
     res.sendFile(__dirname + "/pages/register.html")
 })
 
-app.post('/register', (req, res)=>{
+app.post('/register', async (req, res)=>{
     let result = req.body
     let newUser = new User(result.name, result.pwd, 2000)
     logic.totalSupply-=2000
-    
+    const results = await logic.addData(JSON.stringify(newUser))
+    console.log(results);
 
 })
 
