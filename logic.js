@@ -21,7 +21,7 @@ async function getData(cid) {
     for await (const chunk of stream) {
         data += chunk.toString()
     }
-    console.log(data);
+    return(data);
 }
 
 module.exports = {

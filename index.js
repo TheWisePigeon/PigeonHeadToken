@@ -14,8 +14,11 @@ function User(name, pwd, balance) {
 }
 
 
-app.get('/', (req, res)=>{
-    res.sendFile(__dirname + "/pages/index.html")
+app.get('/', async (req, res)=>{
+    //res.sendFile(__dirname + "/pages/index.html")
+    const user = await logic.getData('QmeiUY5F4Bu3vdrWx3k2NeqApNtJWehXC8htaWeLWP9YPT')
+    const userData = JSON.parse(user)
+    console.log("username :" +userData.name);
 
 })
 
