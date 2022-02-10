@@ -28,7 +28,7 @@ app.post('/register', (req, res)=>{
     let result = req.body
     let newUser = new User(result.name, result.pwd, 2000)
     logic.totalSupply-=2000
-    console.log(logic.totalSupply);
+    
 
 })
 
