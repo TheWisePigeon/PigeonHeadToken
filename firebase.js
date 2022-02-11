@@ -1,13 +1,14 @@
 const admin = require('firebase-admin')
+const keys = require('./keys')
 const { initializeApp } = require('firebase/app')
 const { getFunctions } = require('firebase/functions')
 const { httpsCallable } = require('firebase/functions')
 var serviceAccount = require('./admin.json')
 
 const app = initializeApp({
-    apiKey: "AIzaSyCXQ1MLdMT9Uy8nnRSeiRS5AFcKsaSuyJc",
-    authDomain: "pigeonhead-1d824.firebaseapp.com",
-    projectId: "pigeonhead-1d824"
+    apiKey: keys.apiKey,
+    authDomain: keys.authDomain,
+    projectId: keys.projectId
 })
 admin.initializeApp({
     credential : admin.credential.cert(serviceAccount)
