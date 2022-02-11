@@ -16,7 +16,12 @@ const functions = getFunctions(app)
 const hi = httpsCallable(functions, 'sayHello')
 hi().then((result)=>{
     console.log(result);
+}).catch((error)=>{
+    console.log(error.code, error.message, error.details);
 })
+
+
+
 // var db = admin.firestore()
 // var docRef = db.collection('Users').doc('ne test').set({
 //     hash: "test"
