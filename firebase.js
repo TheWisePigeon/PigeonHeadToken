@@ -10,15 +10,23 @@ const app = initializeApp({
     authDomain: keys.authDomain,
     projectId: keys.projectId
 })
-admin.initializeApp({
-    credential : admin.credential.cert(serviceAccount)
-})
+// admin.initializeApp({
+//     credential : admin.credential.cert(serviceAccount)
+// })
 const functions = getFunctions(app)
 const hi = httpsCallable(functions, 'sayHello')
-hi().then((result)=>{
+// hi().then((result)=>{
+//     console.log(result);
+// }).catch((error)=>{
+//     console.log(error.code, error.message, error.details);
+// })
+
+const test = httpsCallable(functions, 'test')
+
+test({hash:"hashhh"}).then((result)=>{
     console.log(result);
 }).catch((error)=>{
-    console.log(error.code, error.message, error.details);
+    console.log(error.code);
 })
 
 
