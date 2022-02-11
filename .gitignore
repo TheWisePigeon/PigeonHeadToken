@@ -1,3 +1,4 @@
 node_modules
 admin.json
 keys.js
+public/styles/tailwind.css
