@@ -4,6 +4,7 @@ const ipfs = require('ipfs')
 
 async function createNode() {
     const node = await ipfs.create()
+    
     return node
 }
 
