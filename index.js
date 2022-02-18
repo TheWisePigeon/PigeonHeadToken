@@ -37,6 +37,14 @@ app.post('/register', async (req, res)=>{
 
 })
 
+app.get('/login', (req, res)=>{
+    res.sendFile(__dirname + '/pages/login.html')
+})
+
+app.post('/login', (req, res)=>{
+    console.log("Post received")
+})
+
 app.get('/thanks', (req, res)=>{
     res.sendFile(__dirname + "/pages/thanks.html")
 })
