@@ -10,13 +10,13 @@ We will be launching an airdrop soon
 
 By signing up you will receive 20000000 pHs sent right away and 5000000 pHs by referals
 
-You will be asked your username and a password, then you will be given a key, you don't want to loose that key or get it leaked so store it in a safe place
+You will be asked just an username and a password, then you will be given a key, you don't want to loose that key or get it leaked so store it in a safe place
 
-Your informations are stored on a decentraliazed database(more information after airdrop launch)
+Your informations will be stored on a decentraliazed database(more information after airdrop launch)
 
 You will be able to log in using only your key to check your balance and your refering code
 
-
+Sending or receiving pHs will only be possible after airdrop is finished
 
 ## Disclaimer
 
