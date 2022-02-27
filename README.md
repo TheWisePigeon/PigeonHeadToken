@@ -5,7 +5,14 @@ The "PigeonHead"(pH) will be the currency used on the market place
 
 Users will be able to list their items for sale, place bids and buy other users items
 
-We will be making an airdrop very soon
+## Roadmap
+### Airdrop
+We will be launching an airdrop soon
+Every user that will sign up will receive 20000000 pHs sent right away and 5000000 pHs by referals
+You will be asked your username and a password, then you will be given a key, you don't want to loose that key or get it leaked so store it in a safe place
+
+### 
+
 
 ## Disclaimer
 
