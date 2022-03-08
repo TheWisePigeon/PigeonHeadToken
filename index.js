@@ -16,7 +16,7 @@ function User(name, pwd, balance) {
 
 
 app.get('/', async (req, res)=>{
-    res.sendFile(__dirname + "/pages/index.html")
+    res.render("pages/index.ejs")
     // const user = await logic.getData('QmeiUY5F4Bu3vdrWx3k2NeqApNtJWehXC8htaWeLWP9YPT')
     // const userData = JSON.parse(user)
     // console.log("username :" +userData.name);
@@ -25,7 +25,7 @@ app.get('/', async (req, res)=>{
 })
 
 app.get('/register', (req, res)=>{
-    res.sendFile(__dirname + "/pages/register.html")
+    res.render("pages/register.ejs")
 })
 
 app.post('/register', async (req, res)=>{
@@ -38,7 +38,7 @@ app.post('/register', async (req, res)=>{
 })
 
 app.get('/login', (req, res)=>{
-    res.sendFile(__dirname + '/pages/login.html')
+    res.render('pages/login.html')
 })
 
 app.post('/login', (req, res)=>{
@@ -46,7 +46,7 @@ app.post('/login', (req, res)=>{
 })
 
 app.get('/thanks', (req, res)=>{
-    res.sendFile(__dirname + "/pages/thanks.html")
+    res.render("pages/thanks.ejs")
 })
 
 const PORT = process.env.PORT || 3000
