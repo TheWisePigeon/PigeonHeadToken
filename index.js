@@ -19,10 +19,10 @@ function User(name, pwd, refCode) {
 
 app.get('/', async (req, res)=>{
     res.render("pages/index.ejs")
-    // const user = await logic.getData('QmeiUY5F4Bu3vdrWx3k2NeqApNtJWehXC8htaWeLWP9YPT')
-    // const userData = JSON.parse(user)
-    // console.log("username :" +userData.name);
-    const  addr = "/ipfs/QmeiUY5F4Bu3vdrWx3k2NeqApNtJWehXC8htaWeLWP9YPT"
+    const user = await logic.getData('QmfWnhE7TD22nRiGLFzS9jkvHoNviSpkfotwtFUThwpd6s')
+    const userData = JSON.parse(user)
+    console.log(userData);
+    //const  addr = "/ipfs/QmeiUY5F4Bu3vdrWx3k2NeqApNtJWehXC8htaWeLWP9YPT"
 
 })
 
