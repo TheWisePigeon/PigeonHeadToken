@@ -33,11 +33,12 @@ app.get('/register', (req, res)=>{
 app.post('/register', async (req, res)=>{
     let result = req.body
     let code = await getCount()
+    console.log(code);
     let newUser = new User(result.name, result.pwd, code+1)
 
     const results = await logic.addData(JSON.stringify(newUser))
     console.log(results);
-    createUser({hash: results, refCode: code})
+    createUser({hash: results.path, refCode: code})
     console.log("Process finished");
 })
 
