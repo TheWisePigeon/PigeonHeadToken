@@ -3,7 +3,7 @@ const bp = require('body-parser')
 const logic = require('./logic')
 const ipfs = require('ipfs-http-client')
 const app = express()
-const { count } = require('./firebase')
+const { getCount } = require('./firebase')
 const { createUser } = require('./firebase')
 app.use(bp.urlencoded({ extended: true }))
 app.use(express.static('public'))
@@ -32,10 +32,11 @@ app.get('/register', (req, res)=>{
 
 app.post('/register', async (req, res)=>{
     let result = req.body
-    let code = count+1
-    let newUser = new User(result.name, result.pwd, refCode)
+    let code = await getCount()
+    let newUser = new User(result.name, result.pwd, code+1)
 
     const results = await logic.addData(JSON.stringify(newUser))
+    console.log(results);
     createUser({hash: results, refCode: code})
     console.log("Process finished");
 })

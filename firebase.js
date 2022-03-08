@@ -45,6 +45,6 @@ async function getCount() {
 
 
 module.exports = {
-    count,
+    getCount,
     createUser
 }
